@@ -1,0 +1,31 @@
+.tab-container{
+    width: 400px;
+    border:1px solid rgb(178, 178, 178);
+}
+.tab-group{
+    width: 100%;
+    display: flex;
+}
+.tab{
+    flex: 1;
+    padding: 1rem 2rem;
+    background-color: rgb(203, 203, 203);
+    border: none;
+    text-align: center;
+    
+}
+.tab-content{
+    display: none;
+    padding: 1rem;
+}
+.active-tab{
+    background:white;
+    border-top: 2px solid rgb(0, 98, 255);
+    border-bottom: 1px solid transparent;
+}
+.active-content{
+    display: block
+}
+.tab:not(:last-child){
+    border-right:1px solid rgb(178, 178, 178);
+}
