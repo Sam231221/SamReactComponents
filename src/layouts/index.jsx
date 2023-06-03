@@ -27,6 +27,13 @@ const Home = ({ children }) => {
             <li className="nav-item">
               <Link to='/Dropdown'>4.Dropdown</Link>
             </li>
+            <li className="nav-item">
+              <Link to='/CountryCityStateSelect'>5.CountryStateCitySelect</Link>
+
+            </li>
+            <li className="nav-item">
+              <Link to='/CountryPhoneSelect'>6.CountryPhoneSelect</Link>
+            </li>
           </ul>
 
           <h3>Data Display</h3>
@@ -45,13 +52,15 @@ const Home = ({ children }) => {
             </li>
 
           </ul>
-          <h3>Feedback</h3>
+
+          <h3>Loadings</h3>
           <ul>
             <li className="nav-item">
-              <Link to='/Toast'>1.Toast</Link>
+              <Link to='/ImageLazyLoading'>1.ImageLazyLoading</Link>
             </li>
 
           </ul>
+
           <h3>Surfaces</h3>
           <ul>
             <li className="nav-item">

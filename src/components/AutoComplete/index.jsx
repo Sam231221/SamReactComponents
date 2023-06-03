@@ -1,46 +1,22 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
-import { SearchBox1 } from './SearchBox1'
-import './index.css'
-const AutoComplete = () => {
-    const [countries, setCountries] = useState([])
-    const [countryMatch, setCountryMatch] = useState([])
-    const [search, setSearch] = useState("")
-    useEffect(() => {
-        const loadCountries = async () => {
-            const response = await axios.get('https://restcountries.com/v3.1/all')
-            setCountries(response.data)
-        }
-        loadCountries()
+import { useState, useEffect } from 'react';
+import AutocompleteInputDebounce from './AutocompleteInputDebounce';
 
-    }, [])
-    const searchCountries = (text) => {
-        console.log(text)
-        console.log(countries[1].name.common)
-
-        let filteredData = countries.filter(country => country.name.common == text)
-        console.log('d:', filteredData)
-        setCountryMatch(filteredData)
-
-    }
+function index() {
 
     return (
-        <>
-            <div className='search-box'>
-                <h2>AutoComplete</h2>
+        <div className="content mt-5">
+            <div>
+                <h3 className="mb-5">
+                    React autocomplete example with hooks.
+                </h3>
 
-                   <SearchBox1  searchCountries={searchCountries}/>
+
+                <AutocompleteInputDebounce />
             </div>
-            {countryMatch && countryMatch.map((item, index) => (
-                <div className='search-results' key={index}>
-                    <p>{item.name.common}</p>
 
-                </div>
-
-            ))}
-        </>
-    )
+        </div>
+    );
 }
-//export default AutoComplete;
-//do this way for routes.js and layouting to work properly.
-export default AutoComplete;
+
+export default index;
+
