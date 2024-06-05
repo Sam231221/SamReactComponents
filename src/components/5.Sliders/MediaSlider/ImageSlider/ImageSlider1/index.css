@@ -1,0 +1,51 @@
+.container {
+  position: relative;
+}
+
+.container .slide-container .slide .image img {
+  width: 100%;
+}
+
+.container #prev,
+.container #next {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  z-index: 999;
+  background-color: #33333374;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all ease-out 0.3s;
+}
+
+/*Alert:Hover doesnpt work */
+.container #prev:hover,
+.container #next:hover {
+  background-color: #33333390;
+}
+
+.container #prev {
+  left: 20px;
+}
+
+.container #next {
+  right: 20px;
+}
+
+@media (max-width: 500px) {
+  .container #prev {
+    left: 0px;
+    top: 50%;
+  }
+
+  .container #next {
+    right: 0px;
+    top: 50%;
+  }
+}

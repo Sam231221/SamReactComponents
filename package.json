@@ -8,7 +8,8 @@
     "json-server": "json-server --watch db.json --port 9000",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
@@ -21,19 +22,24 @@
     "axios": "^1.4.0",
     "blurhash": "^2.0.5",
     "classnames": "^2.3.2",
+    "clsx": "^1.2.1",
     "country-state-city": "^3.1.4",
     "json-server": "^0.17.3",
+    "lodash": "^4.17.21",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-blurhash": "^0.3.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
+    "react-easy-crop": "^5.0.4",
+    "react-icons": "^4.12.0",
     "react-lazy-load-image-component": "^1.5.6",
+    "react-player": "^2.12.0",
     "react-router-dom": "^6.11.1",
     "sharp": "^0.32.1",
     "styled-components": "5.3.5",
     "swr": "^2.1.5",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.1",
+    "wistia-video-element": "^1.0.8"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
@@ -44,8 +50,14 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "postcss": "^8.4.24",
+    "prettier": "^3.2.5",
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
   }
 }
